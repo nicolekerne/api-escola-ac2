@@ -1,0 +1,70 @@
+<div class="editor-container">
+  <div class="top-nav">
+    <button type="button" class="action-back" (click)="voltar()">
+      <span class="icon-arrow">⇠</span> Cancelar e Sair
+    </button>
+  </div>
+
+  <h1 class="editor-title">Modificar Registro — Matrícula: {{ ra }}</h1>
+
+  <aside *ngIf="carregando" class="alert-box alert-waiting">
+    Carregando os dados do formulário...
+  </aside>
+
+  <aside *ngIf="mensagem" [className]="'alert-box ' + (tipoMensagem === 'sucesso' ? 'alert-success' : 'alert-error')">
+    {{ mensagem }}
+  </aside>
+
+  <form *ngIf="!carregando" (ngSubmit)="salvar()" class="form-sheet">
+    <fieldset class="input-group">
+      <label class="input-label" for="txt-nome">Nome Completo do Estudante</label>
+      <input 
+        id="txt-nome" 
+        type="text" 
+        [(ngModel)]="nome" 
+        name="estudanteNome" 
+        required 
+        placeholder="Digite o nome completo" 
+        class="form-control"
+      />
+    </fieldset>
+
+    <h2 class="section-title">Grade de Matérias</h2>
+
+    <div *ngFor="let item of disciplinas; let idx = index" class="subject-card">
+      <header class="subject-card-top">
+        <span class="subject-number">Matéria #{{ idx + 1 }}</span>
+        <button type="button" class="action-delete" (click)="removerDisciplina(idx)">Desvincular</button>
+      </header>
+
+      <div class="grid-inputs">
+        <fieldset class="input-group">
+          <label class="input-label">Código</label>
+          <input type="text" [(ngModel)]="item.codigo" [name]="'codSubject_' + idx" required placeholder="Ex: MAT101" class="form-control" />
+        </fieldset>
+        
+        <fieldset class="input-group">
+          <label class="input-label">Nome da Disciplina</label>
+          <input type="text" [(ngModel)]="item.nome" [name]="'nameSubject_' + idx" required placeholder="Ex: Matemática" class="form-control" />
+        </fieldset>
+        
+        <fieldset class="input-group">
+          <label class="input-label">Professor(a)</label>
+          <input type="text" [(ngModel)]="item.professor" [name]="'profSubject_' + idx" required placeholder="Ex: Prof. Carlos" class="form-control" />
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="form-appendix">
+      <button type="button" class="action-append" (click)="adicionarDisciplina()">
+        + Nova Disciplina
+      </button>
+    </div>
+
+    <footer class="form-actions-bar">
+      <button type="submit" class="action-submit" [disabled]="salvando">
+        {{ salvando ? 'Gravando dados...' : 'Confirmar Atualizações' }}
+      </button>
+    </footer>
+  </form>
+</div>

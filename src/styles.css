@@ -1,0 +1,229 @@
+/* ===== RESET & CONFIGURAÇÃO BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #fcfbfa; /* Off-white pastel sutil */
+  color: #3c3c3c;
+}
+
+/* ===== ENVELOPE / CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: 45px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(210, 205, 195, 0.15); /* Sombra suave em tom quente */
+}
+
+/* ===== SEÇÃO DE TÍTULOS ===== */
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 22px;
+  color: #4a4a4a;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 28px 0 14px;
+  color: #5a5a5a;
+  font-weight: 500;
+}
+
+/* ===== ESTRUTURA DE TABELAS ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px;
+  border-bottom: 1px solid #f2eee9;
+}
+
+th {
+  background-color: #f7f4ef; /* Bege pastel bem claro */
+  font-weight: 600;
+  color: #6d665c;
+}
+
+tr:hover td {
+  background-color: #fffdfa; /* Brilho pastel quente no hover */
+}
+
+/* ===== COMPONENTES DE BOTÃO ===== */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.btn-ver {
+  background-color: #e3f2fd; /* Azul bebê pastel */
+  color: #1e6091;
+  margin-right: 8px;
+}
+
+.btn-ver:hover {
+  background-color: #d0e8ff;
+}
+
+.btn-editar {
+  background-color: #fff3e0; /* Damasco/Laranja pastel */
+  color: #b05a00;
+}
+
+.btn-editar:hover {
+  background-color: #ffe0b2;
+}
+
+.btn-voltar {
+  background-color: #f1f3f5; /* Cinza pastel neutro */
+  color: #5c636a;
+  margin-bottom: 24px;
+}
+
+.btn-voltar:hover {
+  background-color: #e2e6ea;
+}
+
+.btn-adicionar {
+  background-color: #e8f5e9; /* Verde menta pastel */
+  color: #2e6f40;
+  margin-top: 12px;
+}
+
+.btn-adicionar:hover {
+  background-color: #c8e6c9;
+}
+
+.btn-salvar {
+  background-color: #e3f2fd; /* Azul pastel */
+  color: #1e6091;
+  padding: 10px 26px;
+  font-size: 14.5px;
+}
+
+.btn-salvar:hover:not(:disabled) {
+  background-color: #d0e8ff;
+}
+
+.btn-salvar:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-remover {
+  background-color: #ffebee; /* Rosa/Vermelho pastel */
+  color: #c62828;
+  padding: 6px 14px;
+  font-size: 12.5px;
+}
+
+.btn-remover:hover {
+  background-color: #ffcdd2;
+}
+
+/* ===== GRUPO DE AÇÕES ===== */
+.acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+/* ===== BANNER DE NOTIFICAÇÕES ===== */
+.msg {
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  background-color: #e0f7fa; /* Ciano pastel */
+  color: #006064;
+  font-size: 14px;
+}
+
+.msg.sucesso {
+  background-color: #e8f5e9; /* Verde pastel */
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+}
+
+.msg.erro {
+  background-color: #ffebee; /* Vermelho pastel */
+  color: #b71c1c;
+  border: 1px solid #ffcdd2;
+}
+
+/* ===== CARTÃO DE EXIBIÇÃO ===== */
+.card {
+  background: #faf9f6;
+  border: 1px solid #f0ede6;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  line-height: 1.75;
+}
+
+/* ===== ELEMENTOS DE FORMULÁRIO ===== */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6a6a6a;
+  margin-bottom: 6px;
+}
+
+.campo input {
+  padding: 10px 14px;
+  border: 1px solid #e0dbd5;
+  border-radius: 8px;
+  font-size: 14.5px;
+  color: #333333;
+  background-color: #fdfdfd;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: #b3d7ff; /* Foco azul suave */
+  box-shadow: 0 0 0 3px rgba(179, 215, 255, 0.4);
+}
+
+/* ===== AGRUPAMENTO DE DISCIPLINAS ===== */
+.disciplina-bloco {
+  border: 1px solid #f0ede6;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #fdfcf9;
+}
+
+.disciplina-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}

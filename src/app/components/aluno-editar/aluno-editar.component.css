@@ -1,0 +1,188 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+.editor-container {
+  max-width: 860px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(165, 180, 170, 0.12);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ===== ENCAPSULAMENTO ===== */
+.top-nav {
+  margin-bottom: 20px;
+}
+
+.action-back {
+  background-color: #f4f6f5;
+  color: #5c6360;
+  border: 1px solid #e2e6e4;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-back:hover {
+  background-color: #e5eae7;
+  color: #3b403e;
+}
+
+/* ===== TÍTULOS ===== */
+.editor-title {
+  font-size: 1.5rem;
+  color: #38403c;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: #4a524f;
+  margin: 30px 0 15px;
+  font-weight: 500;
+}
+
+/* ===== FEEDBACKS PASTÉIS ===== */
+.alert-box {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.alert-waiting {
+  background-color: #eaf4ff; /* Azul pastel */
+  color: #2b547e;
+}
+
+.alert-success {
+  background-color: #e6f4ea; /* Verde sálvia claro */
+  color: #137333;
+  border-left: 4px solid #c2e7cc;
+}
+
+.alert-error {
+  background-color: #fce8e6; /* Vermelho pastel suave */
+  color: #c5221f;
+  border-left: 4px solid #fad2cf;
+}
+
+/* ===== ESTRUTURA DO FORMULÁRIO ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  border: none;
+}
+
+.input-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555e5a;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  padding: 10px 14px;
+  border: 1px solid #ced6d2;
+  border-radius: 8px;
+  font-size: 14.5px;
+  color: #2e3331;
+  background-color: #fafbfc;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #a3b899; /* Verde sálvia médio */
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(163, 184, 153, 0.2);
+}
+
+/* ===== BLOCO DE DISCIPLINAS (CARDS) ===== */
+.subject-card {
+  border: 1px solid #e1e8e4;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  background-color: #fcfdfe;
+}
+
+.subject-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #f0f4f2;
+  padding-bottom: 8px;
+}
+
+.subject-number {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #636e69;
+}
+
+/* ===== BOTÕES DE AÇÃO INTERNOS ===== */
+.action-delete {
+  background-color: #fbebe8; /* Vermelho/Rosa pastel sutil */
+  color: #c53030;
+  padding: 5px 12px;
+  font-size: 12.5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-delete:hover {
+  background-color: #f7d4cf;
+}
+
+.action-append {
+  background-color: #e6f4ea; /* Verde menta pastel */
+  color: #137333;
+  padding: 8px 16px;
+  font-size: 13.5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.action-append:hover {
+  background-color: #d2ebd9;
+}
+
+/* ===== RODAPÉ DE SALVAMENTO ===== */
+.form-actions-bar {
+  margin-top: 30px;
+  border-top: 1px solid #f0f4f2;
+  padding-top: 20px;
+}
+
+.action-submit {
+  background-color: #d2ebd9; /* Verde pastel suave */
+  color: #274e35;
+  border: 1px solid #bddec7;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-submit:hover:not(:disabled) {
+  background-color: #bee2c9;
+}
+
+.action-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,116 @@
+/* ===== ESTRUTURA GERAL ===== */
+.workspace-area {
+  max-width: 880px;
+  margin: 35px auto;
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(180, 170, 195, 0.12);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ===== TOPO & NAVEGAÇÃO ===== */
+.navigation-header {
+  margin-bottom: 22px;
+}
+
+.btn-return {
+  background-color: #f3f0f7; /* Roxo acinzentado bem claro */
+  color: #706580;
+  border: 1px solid #eae5f0;
+  border-radius: 6px;
+  padding: 7px 15px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-return:hover {
+  background-color: #e6e0f0;
+  color: #554a65;
+}
+
+/* ===== TIPOGRAFIA ===== */
+.header-title-block {
+  border-bottom: 2px dashed #f0edf5;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.page-heading {
+  font-size: 1.45rem;
+  color: #433a52;
+  font-weight: 600;
+}
+
+/* ===== ALERTAS EM CORES PASTÉIS ===== */
+.status-box {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.status-loading {
+  background-color: #ebf4ff; /* Azul pastel */
+  color: #2b6cb0;
+}
+
+.status-failure {
+  background-color: #fdf2f2; /* Vermelho/Rosa pastel */
+  color: #9b1c1c;
+  border-left: 4px solid #f8b4b4;
+}
+
+.status-empty {
+  background-color: #fefcbf; /* Amarelo pastel */
+  color: #744210;
+}
+
+/* ===== TABELA REFORMULADA ===== */
+.grid-container {
+  overflow-hidden: auto;
+  border-radius: 10px;
+  border: 1px solid #ece9f2;
+}
+
+.data-table-view {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.data-table-view th {
+  background-color: #f4f0fa; /* Lavanda pastel suave */
+  color: #5e5275;
+  font-weight: 600;
+  padding: 14px;
+  text-align: left;
+  font-size: 13.5px;
+  letter-spacing: 0.5px;
+}
+
+.data-table-view td {
+  padding: 14px;
+  border-bottom: 1px solid #f5f2f9;
+  color: #4e455c;
+  font-size: 14px;
+}
+
+.table-row:hover td {
+  background-color: #faf9fc; /* Realce pastel no hover */
+}
+
+.code-highlight {
+  font-weight: 600;
+  color: #63557d;
+}
+
+.subject-name {
+  font-weight: 500;
+}
+
+.instructor-info {
+  color: #6c637a;
+  font-style: italic;
+}

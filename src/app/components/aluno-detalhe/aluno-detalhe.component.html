@@ -1,0 +1,40 @@
+<div class="container">
+  <button class="btn-voltar" (click)="voltar()">← Voltar</button>
+
+  <div *ngIf="carregando" class="msg">Carregando...</div>
+  <div *ngIf="erro" class="msg erro">{{ erro }}</div>
+
+  <div *ngIf="aluno">
+    <h1>Detalhes do Aluno</h1>
+
+    <div class="card">
+      <p><strong>RA:</strong> {{ aluno.ra }}</p>
+      <p><strong>Nome:</strong> {{ aluno.nome }}</p>
+      <p><strong>Quantidade de disciplinas:</strong> {{ aluno.disciplinas.length }}</p>
+    </div>
+
+    <h2>Disciplinas</h2>
+    <div *ngIf="aluno.disciplinas.length === 0" class="msg">Nenhuma disciplina vinculada.</div>
+    <table *ngIf="aluno.disciplinas.length > 0">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Professor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of aluno.disciplinas">
+          <td>{{ d.codigo }}</td>
+          <td>{{ d.nome }}</td>
+          <td>{{ d.professor }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="acoes">
+      <button class="btn-ver" (click)="verDisciplinas()">Ver disciplinas</button>
+      <button class="btn-editar" (click)="editar()">Editar aluno</button>
+    </div>
+  </div>
+</div>

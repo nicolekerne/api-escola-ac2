@@ -1,0 +1,137 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+.dashboard-box {
+  max-width: 940px;
+  margin: 35px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(195, 185, 175, 0.12);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ===== CABEÇALHO ===== */
+.dashboard-header {
+  margin-bottom: 25px;
+  border-bottom: 2px solid #faf4ee;
+  padding-bottom: 15px;
+}
+
+.dashboard-title {
+  font-size: 1.6rem;
+  color: #4a4035;
+  font-weight: 600;
+}
+
+/* ===== QUADROS DE STATUS PASTÉIS ===== */
+.status-banner {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.loading-banner {
+  background-color: #f0f4f8; /* Cinza azulado suave */
+  color: #334e68;
+}
+
+.error-banner {
+  background-color: #fbebe8; /* Rosa/Vermelho pastel */
+  color: #ba2525;
+}
+
+.empty-banner {
+  background-color: #fff3e0; /* Laranja bem claro */
+  color: #b75b00;
+}
+
+/* ===== TABELA DE DADOS ===== */
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #f3ebe1;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.students-table th {
+  background-color: #faf4ee; /* Areia/Pêssego pastel bem claro */
+  color: #635240;
+  font-weight: 600;
+  padding: 14px;
+  text-align: left;
+  font-size: 13.5px;
+  letter-spacing: 0.3px;
+}
+
+.students-table td {
+  padding: 14px;
+  border-bottom: 1px solid #faf5ef;
+  color: #4a4540;
+  font-size: 14.5px;
+}
+
+.student-row:hover td {
+  background-color: #fffbf7; /* Efeito hover quente sutil */
+}
+
+.ra-cell {
+  font-weight: 600;
+  color: #7c6853;
+}
+
+.name-cell {
+  font-weight: 500;
+}
+
+.center-text {
+  text-align: center !important;
+}
+
+/* ===== CONTADORES E BADGES ===== */
+.count-badge {
+  background-color: #f0fdf4; /* Verde menta bem suave */
+  color: #166534;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+/* ===== BOTÕES DE AÇÃO INTERNOS (PASTÉIS) ===== */
+.row-actions {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.row-actions button {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-action-view {
+  background-color: #e0f2fe; /* Azul pastel */
+  color: #0369a1;
+}
+
+.btn-action-view:hover {
+  background-color: #bae6fd;
+}
+
+.btn-action-modify {
+  background-color: #ffedd5; /* Pêssego/Laranja pastel */
+  color: #c2410c;
+}
+
+.btn-action-modify:hover {
+  background-color: #fed7aa;
+}

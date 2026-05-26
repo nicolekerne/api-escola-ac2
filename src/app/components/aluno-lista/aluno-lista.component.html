@@ -1,0 +1,51 @@
+<main class="dashboard-box">
+  <header class="dashboard-header">
+    <h1 class="dashboard-title">Relação de Alunos Matriculados</h1>
+  </header>
+
+  <div *ngIf="carregando" class="status-banner loading-banner">
+    Sincronizando registros com o banco de dados...
+  </div>
+  
+  <div *ngIf="erro" class="status-banner error-banner">
+    Ocorreu um problema: {{ erro }}
+  </div>
+
+  <article class="data-area" *ngIf="!carregando && !erro">
+    <div *ngIf="alunos.length === 0" class="status-banner empty-banner">
+      Não existem estudantes cadastrados no sistema atualmente.
+    </div>
+
+    <div class="table-container" *ngIf="alunos.length > 0">
+      <table class="students-table">
+        <thead>
+          <tr>
+            <th>Matrícula (RA)</th>
+            <th>Nome do Estudante</th>
+            <th>Qtd. Disciplinas</th>
+            <th class="center-text">Operações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of alunos" class="student-row">
+            <td class="ra-cell">{{ item.ra }}</td>
+            <td class="name-cell">{{ item.nome }}</td>
+            <td>
+              <span class="count-badge">{{ item.disciplinas.length }} cadeira(s)</span>
+            </td>
+            <td class="center-text">
+              <div class="row-actions">
+                <button type="button" class="btn-action-view" (click)="verDetalhes(item.ra)">
+                  Consultar
+                </button>
+                <button type="button" class="btn-action-modify" (click)="editar(item.ra)">
+                  Ajustar
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</main>
